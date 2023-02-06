@@ -72,7 +72,7 @@ function cubic(n: number) {
   for (let i = 0; i < n; i++) {
     for (let t = i; t < n; t++) {
         for (let s = t; s < n; s++) {
-            console.log(t);
+            console.log(s);
         }
     }
   }
