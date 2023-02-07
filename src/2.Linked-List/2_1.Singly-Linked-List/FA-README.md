@@ -35,6 +35,12 @@ const linkedlist = {
 عملیات های قابل انجام برروی لیست های منفرد شامل درج ، حذف ، پیمایش و جستجوی مقادیر خاص می باشد.
 
 
+# درج
+```
+
+```
+
+
 # لیست های پیوندی
 
 2- [Cicular linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_2.Circular-Linked-List/FA-README.md)
