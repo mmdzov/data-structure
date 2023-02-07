@@ -8,6 +8,8 @@ describe("Singly Linked List", () => {
     ll.add(12);
     ll.add(13);
 
-    expect(ll.getHead().next.next.value).toBe(13)
+    expect(ll.getHead().value).toBe(10);
+    expect(ll.getHead().next.value).toBe(12);
+    expect(ll.getHead().next.next.value).toBe(13);
   });
 });
