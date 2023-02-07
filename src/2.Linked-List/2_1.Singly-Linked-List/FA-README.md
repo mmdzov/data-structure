@@ -37,7 +37,17 @@ const linkedlist = {
 
 # درج
 ```
-
+node = { value: ...,next: null }
+if(head === null)
+    head = node
+    return node
+end if
+current = head
+while(current.next)
+    current = current.next
+end while
+current.next = node
+return node
 ```
 
 
