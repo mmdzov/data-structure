@@ -14,3 +14,11 @@
   - ممکن است افزودن مقادیر جدید به آرایه، زمان و حافظه پرهزینه ای رقم بزند علت این است که برای درج عنصر جدید لازم است عناصر بعدی جهت جاگذاری عنصر جدید جابجا شوند اما در لیست های پیوندی چنین چیزی لازم نیست چون عناصر جدید بدون جابجایی افزوده میشوند.
   - لیست های پیوندی به دلیل وجود نشانگرهایی که به گره های بعد اشاره میکنند در درج و حذف سرعت بیشتری دارند درحالی که آرایه ها در جستجو سرعت بیشتری دارند.
   - لیست های پیوندی پویا هستند و بسته به نیاز می توانند بزرگ یا کوچک شوند
+
+
+# انواع لیست های پیوندی
+
+1 - [Singly linked list]("https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_1.Singly-Linked-List/FA-README.md)
+2 - [Cicular linked list]("https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_2.Circular-Linked-List/FA-README.md)
+3 - [Doubly Linked list]("https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_3.Doubly-Linked-List/FA-README.md)
+4 - [Circular Doubly linked list]("https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_4.Circular-Doubly-Linked-List/FA-README.md)
