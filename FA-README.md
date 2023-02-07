@@ -21,3 +21,4 @@
 
 
 - [Big-O Notation](https://github.com/mmdzov/data-structure/blob/main/src/1.Big-O-Notation/FA-README.md)
+- [Linked Lists](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/FA-README.md)
