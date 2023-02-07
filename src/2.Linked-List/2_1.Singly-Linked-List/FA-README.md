@@ -33,3 +33,12 @@ const linkedlist = {
 گره اول با value 1 گره **head** نامیده می شود و گره آخر با value 2 گره **tail** نامیده می شود.
 
 عملیات های قابل انجام برروی لیست های منفرد شامل درج ، حذف ، پیمایش و جستجوی مقادیر خاص می باشد.
+
+
+# لیست های پیوندی
+
+2- [Cicular linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_2.Circular-Linked-List/FA-README.md)
+
+3- [Doubly Linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_3.Doubly-Linked-List/FA-README.md)
+
+4- [Circular Doubly linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_4.Circular-Doubly-Linked-List/FA-README.md)
