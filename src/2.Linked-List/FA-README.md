@@ -18,7 +18,10 @@
 
 # انواع لیست های پیوندی
 
-1 - [Singly linked list]("https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_1.Singly-Linked-List/FA-README.md)
-2 - [Cicular linked list]("https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_2.Circular-Linked-List/FA-README.md)
-3 - [Doubly Linked list]("https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_3.Doubly-Linked-List/FA-README.md)
-4 - [Circular Doubly linked list]("https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_4.Circular-Doubly-Linked-List/FA-README.md)
+1- [Singly linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_1.Singly-Linked-List/FA-README.md)
+
+2- [Cicular linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_2.Circular-Linked-List/FA-README.md)
+
+3- [Doubly Linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_3.Doubly-Linked-List/FA-README.md)
+
+4- [Circular Doubly linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_4.Circular-Doubly-Linked-List/FA-README.md)
