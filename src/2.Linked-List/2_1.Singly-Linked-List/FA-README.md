@@ -8,7 +8,6 @@
 
 **به انتهایی ترین گره در لیست پیوندی tail گفته میشود**
 
-
 همچنین یک گره از لیست پیوندی منفرد دارای value و next می باشد.
 
 **value**: به مقدار گره اشاره می کند
@@ -30,12 +29,13 @@ const linkedlist = {
   },
 };
 ```
+
 گره اول با value 1 گره **head** نامیده می شود و گره آخر با value 2 گره **tail** نامیده می شود.
 
 عملیات های قابل انجام برروی لیست های منفرد شامل درج ، حذف ، پیمایش و جستجوی مقادیر خاص می باشد.
 
-
 # درج
+
 ```
 node = { value: ...,next: null }
 if(head === null)
@@ -47,10 +47,33 @@ while(current.next)
     current = current.next
 end while
 current.next = node
+
 return node
 ```
 
+# درج در موقعیت خاص
+
+```
+current = head
+counter = 0
+previous = null
+
+while (current)
+    if (counter === index)
+        node = new Node(value, current)
+        if (!previous) head = node
+        else previous.next = node
+        return node
+    end if
+
+    previous = current
+    current = current.next
+    counter++
+end while
+```
+
 # حذف
+
 ```
 value = removable
 
@@ -70,6 +93,38 @@ end while
 return false
 ```
 
+# جستجو
+
+```
+current = head
+
+while (curr)
+    if(current.value === searchValue)
+        return current
+    end if
+    current = current.next
+end while
+
+return false
+```
+
+# جستجو براساس ایندکس
+
+```
+current = head
+counter = 0
+
+while (current)
+    if (counter === index)
+        return current
+    end if
+    counter++
+    current = current.next
+end while
+
+return false
+
+```
 
 # لیست های پیوندی
 

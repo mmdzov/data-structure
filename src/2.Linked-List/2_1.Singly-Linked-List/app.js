@@ -45,6 +45,61 @@ class SinglyLinkedList {
     return false;
   }
 
+  search(value) {
+    let curr = this.head;
+    while (curr) {
+      if (curr.value === value) return curr;
+      curr = curr.next;
+    }
+
+    return false;
+  }
+
+  searchByIndex(index) {
+    let curr = this.head;
+    let counter = 0;
+
+    while (curr) {
+      if (counter === index) return curr;
+      counter++;
+      curr = curr.next;
+    }
+
+    return false;
+  }
+
+  indexOf(value) {
+    let curr = this.head;
+    let counter = 0;
+
+    while (curr) {
+      if (curr.value === value) return counter;
+      counter++;
+      curr = curr.next;
+    }
+
+    return null;
+  }
+
+  insertAt(value, index) {
+    let curr = this.head;
+    let counter = 0;
+    let prev = null;
+
+    while (curr) {
+      if (counter === index) {
+        const node = new Node(value, curr);
+        if (!prev) this.head = node;
+        else prev.next = node;
+        return node;
+      }
+
+      prev = curr;
+      curr = curr.next;
+      counter++;
+    }
+  }
+
   getHead() {
     return this.head;
   }
