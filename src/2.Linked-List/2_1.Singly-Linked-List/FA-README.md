@@ -70,6 +70,8 @@ while (current)
     current = current.next
     counter++
 end while
+
+return null
 ```
 
 # حذف

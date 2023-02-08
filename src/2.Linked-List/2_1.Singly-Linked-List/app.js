@@ -98,6 +98,8 @@ class SinglyLinkedList {
       curr = curr.next;
       counter++;
     }
+    
+    return null
   }
 
   getHead() {
