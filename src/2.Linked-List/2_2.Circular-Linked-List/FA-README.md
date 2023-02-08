@@ -14,6 +14,21 @@
 معایب لیست پیوندی دایره ای شامل پیچیدگی در مقایسه با لیست پیوندی منفرد، مشکل در پیمایش معکوس، و دشواری انجام عملیات push و pop برروی داده ها همچنین دسترسی تصادفی برروی لیست های پیوندی دایره ای امکان پذیر نمی باشد.
 
 
+# درج
+```
+node = {value:...,next: head}
+current = this.head
+
+if (!head) head = node
+else
+    while (current.next)
+        current = current.next
+        if (current.next === this.head) break;
+    end while
+    current.next = node
+return node
+```
+
 
 # لیست های پیوندی
 
