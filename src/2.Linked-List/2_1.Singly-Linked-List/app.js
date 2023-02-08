@@ -28,6 +28,23 @@ class SinglyLinkedList {
     return node;
   }
 
+  remove(value) {
+    let curr = this.head;
+    let prev = null;
+
+    while (curr) {
+      if (curr.value === value) {
+        if (!prev) this.head = curr.next;
+        else prev.next = curr.next;
+        return curr.value;
+      }
+      prev = curr;
+      curr = curr.next;
+    }
+
+    return false;
+  }
+
   getHead() {
     return this.head;
   }

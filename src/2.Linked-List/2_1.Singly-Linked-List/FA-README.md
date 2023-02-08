@@ -50,6 +50,26 @@ current.next = node
 return node
 ```
 
+# حذف
+```
+value = removable
+
+current = head
+previous = null
+
+while (current)
+    if(current.value === value)
+        if(prev === null) head = current.next
+        else previous.next = current.next
+        return current.value
+    end if
+    previous = current
+    current = current.next
+end while
+
+return false
+```
+
 
 # لیست های پیوندی
 
