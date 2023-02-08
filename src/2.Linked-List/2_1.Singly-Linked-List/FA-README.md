@@ -128,6 +128,15 @@ return false
 
 ```
 
+## پیچیدگی ها
+
+
+|  Add           |  Delete        |  Search        |  InsertAt      |  IndexOf       | SearchByIndex  |
+| :------------: | :------------: | :------------: | :------------: | :------------: | :------------: |
+| O(n)           | O(n)           |  O(n)          |  O(n)          |  O(n)          |  O(n)          |
+
+
+
 # لیست های پیوندی
 
 2- [Cicular linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_2.Circular-Linked-List/FA-README.md)
