@@ -20,4 +20,10 @@ describe("Circular linked list", () => {
     expect(cll.getHead().value).toBe(185);
     expect(cll.getHead().next.next.value).toBe(1000);
   });
+
+  it("should get index", () => {
+    const index = cll.indexOf(1000);
+
+    expect(index).toBe(2);
+  });
 });

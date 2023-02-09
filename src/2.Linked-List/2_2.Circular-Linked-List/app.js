@@ -69,6 +69,21 @@ class CircularLinkedList {
     return false;
   }
 
+  indexOf(value) {
+    let curr = this.head;
+    let counter = 0;
+
+    while (curr) {
+      if (curr.value === value) return counter;
+      if (curr.next === this.head) break;
+
+      curr = curr.next;
+      counter++;
+    }
+
+    return null;
+  }
+
   getHead() {
     return this.head;
   }
