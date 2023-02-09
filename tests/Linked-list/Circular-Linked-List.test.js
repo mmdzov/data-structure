@@ -12,4 +12,12 @@ describe("Circular linked list", () => {
 
     expect(cll.getHead().next.next.next.next.next.value).toBe(5);
   });
+
+  it("sould add in specific position", () => {
+    cll.insertAt(185, 0);
+    cll.insertAt(1000, 2);
+
+    expect(cll.getHead().value).toBe(185);
+    expect(cll.getHead().next.next.value).toBe(1000);
+  });
 });

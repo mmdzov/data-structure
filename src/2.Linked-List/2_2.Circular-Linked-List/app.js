@@ -27,6 +27,48 @@ class CircularLinkedList {
     return node;
   }
 
+  insertAt(value, index) {
+    let node = new Node(value);
+    let curr = this.head;
+    let counter = 0;
+    let prev = null;
+
+    if (index === 0) {
+      while (curr) {
+        if (curr.next === this.head) break;
+        curr = curr.next;
+      }
+
+      node.next = this.head;
+      this.head = node;
+
+      curr.next = node;
+
+      return node;
+    }
+
+    while (curr) {
+      if (counter === index) {
+        if (curr.next === this.head) {
+          node.next = this.head;
+          this.head = node;
+          return node;
+        }
+
+        node.next = curr;
+        prev.next = node;
+
+        return node;
+      }
+      if (curr.next === this.head) return false;
+
+      counter++;
+      prev = curr;
+      curr = curr.next;
+    }
+    return false;
+  }
+
   getHead() {
     return this.head;
   }
