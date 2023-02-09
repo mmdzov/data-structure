@@ -75,13 +75,41 @@ class CircularLinkedList {
 
     while (curr) {
       if (curr.value === value) return counter;
-      if (curr.next === this.head) break;
+      if (curr.next === this.head) return null;
 
       curr = curr.next;
       counter++;
     }
 
     return null;
+  }
+
+  search(value) {
+    let curr = this.head;
+
+    while (curr) {
+      if (curr.value == value) return curr;
+      if (curr.next === this.head) return false;
+
+      curr = curr.next;
+    }
+
+    return false;
+  }
+
+  searchByIndex(index) {
+    let curr = this.head;
+    let counter = 0;
+
+    while (curr) {
+      if (counter === index) return curr;
+      if (curr.next === this.head) return false;
+
+      counter++;
+      curr = curr.next;
+    }
+
+    return false;
   }
 
   getHead() {

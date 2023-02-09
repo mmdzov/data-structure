@@ -26,4 +26,18 @@ describe("Circular linked list", () => {
 
     expect(index).toBe(2);
   });
+
+  it("should search nodes", () => {
+    const node = cll.search(41);
+
+    expect(node.value).toBe(41);
+    expect(node.next.value).toBe(71);
+  });
+
+  it("should search by index nodes", () => {
+    const node = cll.searchByIndex(1);
+
+    expect(node.value).toBe(5);
+    expect(node.next.value).toBe(1000);
+  });
 });
