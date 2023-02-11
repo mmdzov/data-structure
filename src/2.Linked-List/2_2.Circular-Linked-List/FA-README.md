@@ -72,7 +72,7 @@ return false
 current = head
 previous = null
 
-if(current.value)
+if(current.value === value)
     while (current)
         if(current.next === head)
             break
