@@ -130,12 +130,9 @@ return false
 
 ## پیچیدگی ها
 
-
-|  Add           |  Delete        |  Search        |  InsertAt      |  IndexOf       | SearchByIndex  |
-| :------------: | :------------: | :------------: | :------------: | :------------: | :------------: |
-| O(n)           | O(n)           |  O(n)          |  O(n)          |  O(n)          |  O(n)          |
-
-
+| Add  | Delete | Search | InsertAt | IndexOf | SearchByIndex |
+| :--: | :----: | :----: | :------: | :-----: | :-----------: |
+| O(n) |  O(n)  |  O(n)  |   O(n)   |  O(n)   |     O(n)      |
 
 # لیست های پیوندی
 
