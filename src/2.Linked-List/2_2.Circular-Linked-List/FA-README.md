@@ -17,90 +17,98 @@
 # درج
 
 ```
-node = {value:...,next: head}
-current = this.head
+add(value)
+    node = {value:value,next: head}
+    current = this.head
 
-if (!head) head = node
-else
-    while (current.next)
-        current = current.next
-        if (current.next === this.head) break;
-    end while
-    current.next = node
-return node
+    if (!head) head = node
+    else
+        while (current.next)
+            current = current.next
+            if (current.next === this.head) break;
+        end while
+        current.next = node
+    return node
+end add
 ```
 
 # جستجو
 
 ```
-current = head
-while (current)
-    if (current.value === value)
-        return current
-    end if
-    if (current.next === head)
-        return false
-    end if
-    current = current.next
-end while
-return false
+search(value)
+    current = head
+    while (current)
+        if (current.value === value)
+            return current
+        end if
+        if (current.next === head)
+            return false
+        end if
+        current = current.next
+    end while
+    return false
+end search
 ```
 
 # جستجو براساس ایندکس
 
 ```
-current = head
-counter = 0
+searchByIndex(index)
+    current = head
+    counter = 0
 
-while (current)
-    if(counter === index)
-        return current
-    end if
-    if(current.next === head)
-        return false
-    end if
+    while (current)
+        if(counter === index)
+            return current
+        end if
+        if(current.next === head)
+            return false
+        end if
 
-    counter++
-    current = current.next
-end while
-return false
+        counter++
+        current = current.next
+    end while
+    return false
+end searchByIndex
 ```
 
 # حذف
 
 ```
-current = head
-previous = null
+remove(value)
+    current = head
+    previous = null
 
-if(current.value === value)
+    if(current.value === value)
+        while (current)
+            if(current.next === head)
+                break
+            end if
+            current = current.next
+        end while
+
+        next = head.next
+        current.next = next
+        head = next
+
+        return true
+    end if
+
     while (current)
-        if(current.next === head)
-            break
+        if(current.value === value)
+            previous.next = current.next
+            return true
         end if
+        if(current.next === head)
+            return false
+        end if
+
+        previous = current
         current = current.next
     end while
 
-    next = head.next
-    current.next = next
-    head = next
-
-    return true
-end if
-
-while (current)
-    if(current.value === value)
-        previous.next = current.next
-        return true
-    end if
-    if(current.next === head)
-        return false
-    end if
-
-    previous = current
-    current = current.next
-end while
-
-return false
+    return false
+end remove
 ```
 
 ## پیچیدگی ها
