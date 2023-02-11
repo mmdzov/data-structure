@@ -7,8 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "jest": "jest",
-    "jest:watch": "jest --watch"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",

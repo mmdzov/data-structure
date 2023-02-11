@@ -45,4 +45,10 @@ describe("Singly Linked List", () => {
 
     expect(node.value).toBe(66);
   });
+
+  it("should traversal between node", () => {
+    sll.traversal((value, next, index) => {
+      if (index === 0) expect(value).toBe(10);
+    });
+  });
 });

@@ -98,8 +98,20 @@ class SinglyLinkedList {
       curr = curr.next;
       counter++;
     }
-    
-    return null
+
+    return null;
+  }
+
+  traversal(callback = (value, next, index) => {}) {
+    let curr = this.head;
+    let counter = 0;
+
+    while (curr) {
+      callback(curr.value, curr.next, counter);
+
+      counter++;
+      curr = curr.next;
+    }
   }
 
   getHead() {
