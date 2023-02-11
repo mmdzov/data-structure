@@ -45,4 +45,10 @@ describe("Doubly Linked List", () => {
     expect(dll.getTail().prev.value).toBe(3);
     expect(dll.length).toBe(3);
   });
+
+  it("Should get index of node", () => {
+    const index = dll.indexOf(3);
+
+    expect(index).toBe(1);
+  });
 });
