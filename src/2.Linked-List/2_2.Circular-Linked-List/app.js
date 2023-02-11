@@ -88,7 +88,7 @@ class CircularLinkedList {
     let curr = this.head;
 
     while (curr) {
-      if (curr.value == value) return curr;
+      if (curr.value === value) return curr;
       if (curr.next === this.head) return false;
 
       curr = curr.next;
