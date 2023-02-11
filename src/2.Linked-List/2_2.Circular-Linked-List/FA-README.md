@@ -111,11 +111,31 @@ remove(value)
 end remove
 ```
 
+# پیمایش
+
+```
+traversal(callback = (value,next,index) => {})
+    current = head
+    counter = 0
+
+    while(current)
+        callback(current.value, current.next, counter)
+        if(current.next === head)
+            break;
+        end if
+
+        counter++
+        current = current.next
+    end while
+end traversal
+
+```
+
 ## پیچیدگی ها
 
-| Add  | Delete | Search | InsertAt | IndexOf | SearchByIndex |
-| :--: | :----: | :----: | :------: | :-----: | :-----------: |
-| O(n) |  O(n)  |  O(n)  |   O(n)   |  O(n)   |     O(n)      |
+| Add  | Delete | Search | InsertAt | IndexOf | SearchByIndex | Traversal |
+| :--: | :----: | :----: | :------: | :-----: | :-----------: | :-------: |
+| O(n) |  O(n)  |  O(n)  |   O(n)   |  O(n)   |     O(n)      |   O(n)    |
 
 # لیست های پیوندی
 
