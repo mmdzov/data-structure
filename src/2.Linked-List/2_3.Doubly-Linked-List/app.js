@@ -50,10 +50,32 @@ class DoublyLinkedList {
   }
 
   pop() {
-    this.tail = this.tail.prev;
-    this.tail.next = null;
+    this.tail = this.tail?.prev || null;
+    if (this.tail?.next) this.tail.next = null;
+    if (this.length === 1) this.head = null;
+    this.length--;
 
     return true;
+  }
+
+  remove(value) {
+    let curr = this.head;
+
+    while (curr) {
+      if (curr.value === value) {
+        if (curr?.prev) curr.prev.next = curr.next;
+        if (curr?.next) curr.next.prev = curr.prev;
+        if (!curr?.next && !curr?.prev) {
+          this.head = null;
+          this.tail = null;
+        }
+        this.length--;
+        return true;
+      }
+      curr = curr.next;
+    }
+
+    return false;
   }
 
   getHead() {

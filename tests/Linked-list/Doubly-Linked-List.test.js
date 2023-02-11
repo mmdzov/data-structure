@@ -38,4 +38,11 @@ describe("Doubly Linked List", () => {
 
     expect(dll.getHead().next.next.next.next).toBe(null);
   });
+
+  it("Should remove node", () => {
+    dll.remove(99);
+
+    expect(dll.getTail().prev.value).toBe(3);
+    expect(dll.length).toBe(3);
+  });
 });
