@@ -13,5 +13,29 @@ describe("Doubly Linked List", () => {
     expect(dll.getHead().next.prev.value).toBe(12);
     expect(dll.getTail().value).toBe(18);
     expect(dll.getTail().prev.value).toBe(99);
+
+    expect(dll.length).toBe(4);
+  });
+
+  it("Should traverse between nodes", () => {
+    dll.traversal((value, next, prev, index) => {
+      if (index === 0) expect(value).toBe(12);
+    });
+  });
+
+  it("Should reverse traverse between nodes", () => {
+    dll.reverse((value, next, prev, index) => {
+      if (index === 0) expect(value).toBe(18);
+    });
+  });
+
+  it("Should pop node", () => {
+    dll.add(122);
+
+    expect(dll.getHead().next.next.next.next.value).toBe(122);
+
+    dll.pop();
+
+    expect(dll.getHead().next.next.next.next).toBe(null);
   });
 });
