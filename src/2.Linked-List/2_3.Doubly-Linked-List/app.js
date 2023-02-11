@@ -91,7 +91,31 @@ class DoublyLinkedList {
 
     return null;
   }
-  
+
+  search(value) {
+    let curr = this.head;
+
+    while (curr) {
+      if (curr.value === value) return curr;
+      curr = curr.next;
+    }
+
+    return false;
+  }
+
+  searchByIndex(index) {
+    let curr = this.head;
+    let counter = 0;
+
+    while (curr) {
+      if (index === counter) return curr;
+
+      counter++;
+      curr = curr.next;
+    }
+
+    return false;
+  }
 
   getHead() {
     return this.head;

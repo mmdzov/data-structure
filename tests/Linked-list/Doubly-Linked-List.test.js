@@ -51,4 +51,16 @@ describe("Doubly Linked List", () => {
 
     expect(index).toBe(1);
   });
+
+  it("Should search nodes", () => {
+    const node = dll.search(3);
+
+    expect(node.next.value).toBe(18);
+  });
+
+  it("Should search by index nodes", () => {
+    const node = dll.searchByIndex(2);
+
+    expect(node.value).toBe(18);
+  });
 });
