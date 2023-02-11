@@ -37,95 +37,102 @@ const linkedlist = {
 # درج
 
 ```
-node = { value: ...,next: null }
-if(head === null)
-    head = node
-    return node
-end if
-current = head
-while(current.next)
-    current = current.next
-end while
-current.next = node
+add(value)
+    node = { value: value,next: null }
+    if(head === null)
+        head = node
+        return node
+    end if
+    current = head
+    while(current.next)
+        current = current.next
+    end while
+    current.next = node
 
-return node
+    return node
+end add
 ```
 
 # درج در موقعیت خاص
 
 ```
-current = head
-counter = 0
-previous = null
+insertAt(value, index)
+    current = head
+    counter = 0
+    previous = null
 
-while (current)
-    if (counter === index)
-        node = new Node(value, current)
-        if (!previous) head = node
-        else previous.next = node
-        return node
-    end if
+    while (current)
+        if (counter === index)
+            node = { value: value, next: current }
+            if (!previous) head = node
+            else previous.next = node
+            return node
+        end if
 
-    previous = current
-    current = current.next
-    counter++
-end while
+        previous = current
+        current = current.next
+        counter++
+    end while
 
-return null
+    return null
+end insertAt
 ```
 
 # حذف
 
 ```
-value = removable
+remove(value)
+    current = head
+    previous = null
 
-current = head
-previous = null
+    while (current)
+        if(current.value === value)
+            if(prev === null) head = current.next
+            else previous.next = current.next
+            return current.value
+        end if
+        previous = current
+        current = current.next
+    end while
 
-while (current)
-    if(current.value === value)
-        if(prev === null) head = current.next
-        else previous.next = current.next
-        return current.value
-    end if
-    previous = current
-    current = current.next
-end while
-
-return false
+    return false
+end remove
 ```
 
 # جستجو
 
 ```
-current = head
+search(value)
+    current = head
 
-while (curr)
-    if(current.value === searchValue)
-        return current
-    end if
-    current = current.next
-end while
+    while (curr)
+        if(current.value === value)
+            return current
+        end if
+        current = current.next
+    end while
 
-return false
+    return false
+end search
 ```
 
 # جستجو براساس ایندکس
 
 ```
-current = head
-counter = 0
+searchByIndex(index)
+    current = head
+    counter = 0
 
-while (current)
-    if (counter === index)
-        return current
-    end if
-    counter++
-    current = current.next
-end while
+    while (current)
+        if (counter === index)
+            return current
+        end if
+        counter++
+        current = current.next
+    end while
 
-return false
-
+    return false
+end searchByIndex
 ```
 
 ## پیچیدگی ها
