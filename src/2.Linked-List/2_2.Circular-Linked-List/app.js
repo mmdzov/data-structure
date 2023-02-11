@@ -112,6 +112,50 @@ class CircularLinkedList {
     return false;
   }
 
+  remove(value) {
+    let curr = this.head;
+    let prev = null;
+
+    if (curr.value === value) {
+      while (curr) {
+        if (curr.next === this.head) break;
+        curr = curr.next;
+      }
+      let next = this.head.next;
+      curr.next = next;
+      this.head = next;
+      return true;
+    }
+
+    while (curr) {
+      if (curr.value === value) {
+        prev.next = curr.next;
+        return true;
+      }
+
+      if (curr.next === this.head) return false;
+
+      prev = curr;
+      curr = curr.next;
+    }
+
+    return false;
+  }
+
+  traversal(callback = (value, next, index) => {}) {
+    let curr = this.head;
+    let counter = 0;
+
+    while (curr) {
+      callback(curr.value, curr.next, counter);
+
+      if (curr.next === this.head) break;
+
+      counter++;
+      curr = curr.next;
+    }
+  }
+
   getHead() {
     return this.head;
   }

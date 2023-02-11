@@ -40,4 +40,16 @@ describe("Circular linked list", () => {
     expect(node.value).toBe(5);
     expect(node.next.value).toBe(1000);
   });
+
+  it("should remove node", () => {
+    const result = cll.remove(185);
+
+    expect(result).toBe(true);
+  });
+
+  it("should traversal between nodes", () => {
+    cll.traversal((value, next, index) => {
+      if (index === 0) expect(value).toBe(5);
+    });
+  });
 });
