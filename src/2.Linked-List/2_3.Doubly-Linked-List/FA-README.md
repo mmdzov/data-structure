@@ -25,12 +25,143 @@
 ```
 add(value)
     node = { value: value, next: null, previous: tail }
-    if(tail) tail.next = node
+    if(tail)
+        tail.next = node
+    end if
+
     tail = node
     length++
 
-    if(!head) head = tail
+    if(!head)
+        head = tail
+    end if
 
     return node
 end add
 ```
+
+# پیمایش
+
+```
+traversal(callback = (value,next,previous,index) => {})
+    current = head
+    counter = 0
+
+    while (current)
+        callback(current.value,current.next,current.previous,counter)
+
+        counter++
+        current = current.next
+    end while
+end traversal
+```
+
+# پیمایش معکوس
+
+```
+reverse(callback = (value,next,previous,index) => {})
+    current = tail
+    counter = 0
+
+    while (current)
+        callback(current.value,current.next,current.previous,counter)
+
+        counter++
+        current = current.previous
+    end while
+end reverse
+```
+
+# حذف از آخر (pop)
+
+```
+pop()
+    tail = tail.previous || null
+    if (tail.next) tail.next = null
+    if (length === 1) head = null
+    length--
+
+    return true
+end pop
+```
+
+# حذف
+
+```
+remove(value)
+    current = head
+
+    while (current)
+        if(current.value === value)
+            if(current.previous)
+                current.previous.next = current.next
+            end if
+            if(current.next)
+                current.next.previous = current.previous
+            end if
+            if(!current.next && !current.previous)
+                head = null
+                tail = null
+            end if
+
+            length--
+            return true
+        end if
+        current = current.next
+    end while
+
+    return false
+end remove
+```
+
+# جستجو
+
+```
+search(value)
+    current = head
+
+    while (current)
+        if(current.value === value)
+            return current
+        end if
+
+        current = current.next
+    end while
+
+    return false
+end search
+```
+
+# جستجو براساس ایندکس
+
+```
+searchByIndex(index)
+    current = head
+    counter = 0
+
+    while (current)
+        if(index === counter)
+            return current
+        end if
+
+        counter++
+        current = current.next
+    end while
+
+    return false
+end searchByIndex
+```
+
+## پیچیدگی ها
+
+| Add  | Delete | Search | Reverse | IndexOf | SearchByIndex | Traversal | Pop  |
+| :--: | :----: | :----: | :-----: | :-----: | :-----------: | :-------: | ---- |
+| O(1) |  O(n)  |  O(n)  |  O(n)   |  O(n)   |     O(n)      |   O(n)    | O(1) |
+
+# لیست های پیوندی
+
+1- [Singly linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_1.Singly-Linked-List/FA-README.md)
+
+2- [Cicular linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_2.Circular-Linked-List/FA-README.md)
+
+4- [Circular Doubly linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_4.Circular-Doubly-Linked-List/FA-README.md)
