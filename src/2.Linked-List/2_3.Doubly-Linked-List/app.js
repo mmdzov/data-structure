@@ -19,10 +19,9 @@ class DoublyLinkedList {
     this.tail = node;
     this.length++;
 
-    if (!this.head) {
-      this.head = this.tail;
-      return node;
-    }
+    if (!this.head) this.head = this.tail;
+
+    return node;
   }
 
   traversal(callback = (value, next, prev, index) => {}) {

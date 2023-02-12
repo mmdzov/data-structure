@@ -19,3 +19,18 @@
 
 - به علت وجود نشانگر previous به حافظه اضافی در مقایسه با لیست پیوندی منفرد نیاز دارد درنتیجه این منجر به عملیات کندتر و پیاده سازی و نگهداری پیچیده تر می شود
 - پیمایش در لیست پیوندی دوگانه می تواند کند تر از پیمایش یک لیست پیوندی منفرد باشد
+
+# درج
+
+```
+add(value)
+    node = { value: value, next: null, previous: tail }
+    if(tail) tail.next = node
+    tail = node
+    length++
+
+    if(!head) head = tail
+
+    return node
+end add
+```
