@@ -13,9 +13,15 @@
 - برای الگوریتم هایی مانند Round Robin مناسب است و می تواند نیاز به پیمایش کامل برای انجام عملیات خاص را برطرف کند
 - می توانند برای ساخت حافظه پنهان MRU/LRU استفاده شوند
 
-
 # معایب
+
 - به دلیل وجود اشاره گر previous از حافظه بیشتری نسبت به لیست پیوندی منفرد استفاده می کند
 - همچنین شامل معایب لیست پیوندی دوگانه میشود
 
+# لیست های پیوندی
 
+1- [Singly linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_1.Singly-Linked-List/FA-README.md)
+
+2- [Cicular linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_2.Circular-Linked-List/FA-README.md)
+
+3- [Doubly Linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_3.Doubly-Linked-List/FA-README.md)
