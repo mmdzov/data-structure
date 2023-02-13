@@ -51,7 +51,10 @@ class DoublyLinkedList {
   pop() {
     this.tail = this.tail?.prev || null;
     if (this.tail?.next) this.tail.next = null;
-    if (this.length === 1) this.head = null;
+    if (this.length === 1) {
+      this.head = null;
+      this.tail = null;
+    }
     this.length--;
 
     return true;
