@@ -21,6 +21,8 @@ class CircularDoublyLinkedList {
 
     if (!this.head) this.head = this.tail;
     else this.head.prev = node;
+
+    return node;
   }
 
   indexOf(value) {

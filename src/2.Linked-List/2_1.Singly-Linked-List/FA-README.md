@@ -105,7 +105,7 @@ end remove
 search(value)
     current = head
 
-    while (curr)
+    while (current)
         if(current.value === value)
             return current
         end if

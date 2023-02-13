@@ -19,13 +19,13 @@
 ```
 add(value)
     node = {value:value,next: head}
-    current = this.head
+    current = head
 
     if (!head) head = node
     else
         while (current.next)
             current = current.next
-            if (current.next === this.head) break;
+            if (current.next === head) break;
         end while
         current.next = node
     return node
