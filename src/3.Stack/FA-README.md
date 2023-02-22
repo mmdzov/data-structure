@@ -9,3 +9,12 @@
   <img src="https://github.com/mmdzov/data-structure/blob/main/assets/Stack1.0.jpg" alt="1.Stack" />
   <div>1.Stack</div>
 </div>
+
+
+نکات بیشتر را مرور می کنیم
+
+1. هنگامی که می خواهیم یک عنصر را وارد Stack کنیم به آن عملیات، push می گوییم.
+2. هنگامی که می خواهیم یک عنصر را از Stack خارج کنیم به آن عملیات ، pop می گوییم
+3. هنگامی که می خواهیم یک Stack خالی را pop کنیم، به آن underflow گفته می شود.
+4. هنگامی که می خواهیم عنصری را به Stack که قبلا پر شده است push کنیم ، به آن overflow گفته می شود.
+
