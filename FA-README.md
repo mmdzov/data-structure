@@ -29,3 +29,4 @@
   - [Doubly Linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_3.Doubly-Linked-List/FA-README.md)
   - [Circular Doubly linked list](https://github.com/mmdzov/data-structure/blob/main/src/2.Linked-List/2_4.Circular-Doubly-Linked-List/FA-README.md)
 - [Stack](https://github.com/mmdzov/data-structure/blob/main/src/3.Stack/FA-README.md)
+- [Queue](https://github.com/mmdzov/data-structure/blob/main/src/3.Queue/FA-README.md)
