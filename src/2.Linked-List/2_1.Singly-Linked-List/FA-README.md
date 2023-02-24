@@ -41,13 +41,14 @@ add(value)
     node = { value: value,next: null }
     if(head === null)
         head = node
+        tail = node
+        length++
         return node
     end if
-    current = head
-    while(current.next)
-        current = current.next
-    end while
-    current.next = node
+
+    tail.next = node
+    tail = node
+    length++
 
     return node
 end add
@@ -66,6 +67,7 @@ insertAt(value, index)
             node = { value: value, next: current }
             if (!previous) head = node
             else previous.next = node
+            length++
             return node
         end if
 
@@ -89,6 +91,7 @@ remove(value)
         if(current.value === value)
             if(prev === null) head = current.next
             else previous.next = current.next
+            length--
             return current.value
         end if
         previous = current
@@ -155,7 +158,7 @@ end traversal
 
 | Add  | Delete | Search | InsertAt | IndexOf | SearchByIndex | Traversal |
 | :--: | :----: | :----: | :------: | :-----: | :-----------: | :-------: |
-| O(n) |  O(n)  |  O(n)  |   O(n)   |  O(n)   |     O(n)      |   O(n)    |
+| O(1) |  O(n)  |  O(n)  |   O(n)   |  O(n)   |     O(n)      |   O(n)    |
 
 # لیست های پیوندی
 
