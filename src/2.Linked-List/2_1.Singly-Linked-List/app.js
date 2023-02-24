@@ -8,6 +8,7 @@ class Node {
 class SinglyLinkedList {
   constructor() {
     this.head = null;
+    this.length = 0
   }
 
   add(value) {
@@ -15,6 +16,7 @@ class SinglyLinkedList {
 
     if (!this.head) {
       this.head = node;
+      this.length++
       return node;
     }
 
@@ -24,8 +26,18 @@ class SinglyLinkedList {
       curr = curr.next;
     }
     curr.next = node;
+    this.length++
 
     return node;
+  }
+
+  prepend(value) {
+    let node = new Node(value, this.head);
+
+    this.head = node;
+    this.length++
+    
+    return node
   }
 
   remove(value) {
@@ -36,6 +48,7 @@ class SinglyLinkedList {
       if (curr.value === value) {
         if (!prev) this.head = curr.next;
         else prev.next = curr.next;
+        this.length--
         return curr.value;
       }
       prev = curr;
@@ -91,6 +104,7 @@ class SinglyLinkedList {
         const node = new Node(value, curr);
         if (!prev) this.head = node;
         else prev.next = node;
+        this.length++
         return node;
       }
 
@@ -114,7 +128,7 @@ class SinglyLinkedList {
     }
   }
 
-  getHead() {
+  peek() {
     return this.head;
   }
 }
