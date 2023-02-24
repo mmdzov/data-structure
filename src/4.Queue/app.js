@@ -6,7 +6,7 @@ class Queue {
   }
 
   enqueue(value) {
-    return this.linkedList.prepend(value);
+    return this.linkedList.add(value);
   }
 
   dequeue() {

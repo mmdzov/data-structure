@@ -14,10 +14,12 @@ class Stack {
   }
 
   peek() {
-    return this.linkedList.peek();
+    if (this.linkedList.isEmpty()) return null;
+
+    return this.linkedList.head.value;
   }
 
-  length() {
+  size() {
     return this.linkedList.length;
   }
 }

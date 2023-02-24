@@ -140,7 +140,9 @@ class SinglyLinkedList {
   }
 
   peek() {
-    return this.head;
+    if (this.isEmpty()) return null;
+
+    return this.head.value;
   }
 }
 

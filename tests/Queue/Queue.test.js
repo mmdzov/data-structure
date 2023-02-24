@@ -9,7 +9,14 @@ describe("Queue", () => {
     queue.enqueue(14);
     queue.enqueue(15);
 
-    expect(queue.peek()).toBe(15);
+    expect(queue.peek()).toBe(12);
     expect(queue.size()).toBe(4);
+  });
+
+  it("Should dequeue", () => {
+    queue.dequeue();
+
+    expect(queue.peek()).toBe(13);
+    expect(queue.size()).toBe(3);
   });
 });
