@@ -38,6 +38,10 @@ class SinglyLinkedList {
     return node;
   }
 
+  isEmpty() {
+    return !this.head;
+  }
+
   pop() {
     if (!this.head) return this.length;
     this.head = this.head.next;
