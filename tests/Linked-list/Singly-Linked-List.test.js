@@ -10,16 +10,16 @@ describe("Singly Linked List", () => {
     sll.add(8);
     sll.add(103);
 
-    expect(sll.getHead().value).toBe(10);
-    expect(sll.getHead().next.value).toBe(12);
-    expect(sll.getHead().next.next.value).toBe(13);
+    expect(sll.peek().value).toBe(10);
+    expect(sll.peek().next.value).toBe(12);
+    expect(sll.peek().next.next.value).toBe(13);
   });
 
   it("should delete node", () => {
     const removed = sll.remove(12);
 
     expect(removed).toBe(12);
-    expect(sll.getHead().next.value).toBe(13);
+    expect(sll.peek().next.value).toBe(13);
   });
 
   it("should search by value", () => {
