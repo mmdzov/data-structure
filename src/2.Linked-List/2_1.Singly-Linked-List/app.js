@@ -8,6 +8,7 @@ class Node {
 class SinglyLinkedList {
   constructor() {
     this.head = null;
+    this.tail = null;
     this.length = 0;
   }
 
@@ -16,16 +17,13 @@ class SinglyLinkedList {
 
     if (!this.head) {
       this.head = node;
+      this.tail = node;
       this.length++;
       return node;
     }
 
-    let curr = this.head;
-
-    while (curr.next) {
-      curr = curr.next;
-    }
-    curr.next = node;
+    this.tail.next = node;
+    this.tail = node;
     this.length++;
 
     return node;
@@ -56,6 +54,7 @@ class SinglyLinkedList {
       if (curr.value === value) {
         if (!prev) this.head = curr.next;
         else prev.next = curr.next;
+        if (!this.head) this.tail = null;
         this.length--;
         return curr.value;
       }
