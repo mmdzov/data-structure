@@ -27,4 +27,4 @@
 - [Stack](https://github.com/mmdzov/data-structure/blob/main/src/3.Stack/FA-README.md)
 - [Queue](https://github.com/mmdzov/data-structure/blob/main/src/4.Queue/FA-README.md)
 - [Hash-Table](https://github.com/mmdzov/data-structure/blob/main/src/5.Hash-Table/FA-README.md)
-- [Heap](https://github.com/mmdzov/data-structure/blob/main/src/6.Heap/FA-README.md)
+- [Heap (Min heap and Max heap)](https://github.com/mmdzov/data-structure/blob/main/src/6.Heap/FA-README.md)
