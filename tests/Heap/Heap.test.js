@@ -13,6 +13,8 @@ describe("Heap", () => {
     min.insert(1);
 
     expect(min.dataset).toStrictEqual([1, 3, 2, 6, 4, 5]);
+    expect(min.search(6)).toStrictEqual([3]);
+    expect(min.search(3)).toStrictEqual([1]);
   });
 
   it("Should add max-heap", () => {
@@ -24,5 +26,7 @@ describe("Heap", () => {
     max.insert(6);
 
     expect(max.dataset).toStrictEqual([6, 4, 5, 1, 3, 2]);
+    expect(max.search(6)).toStrictEqual([0]);
+    expect(max.search(3)).toStrictEqual([4]);
   });
 });

@@ -45,6 +45,16 @@ class Heap {
       current = this.getParentIndex(current);
     }
   }
+
+  search(item) {
+    let founds = [];
+
+    for (let i = 0; i < this.dataset.length; i++) {
+      if (this.dataset[i] === item) founds.push(i);
+    }
+
+    return founds;
+  }
 }
 
 module.exports = Heap;
