@@ -29,4 +29,22 @@ describe("Heap", () => {
     expect(max.search(6)).toStrictEqual([0]);
     expect(max.search(3)).toStrictEqual([4]);
   });
+
+  it("Should remove min-heap item", () => {
+    expect(min.dataset[1]).toBe(3);
+
+    min.remove(3);
+
+    expect(min.search(3)).toStrictEqual([]);
+    expect(min.dataset[1]).not.toBe(3);
+  });
+
+  it("Should remove max-heap item", () => {
+    expect(max.dataset[1]).toBe(4);
+
+    max.remove(4);
+
+    expect(max.search(4)).toStrictEqual([]);
+    expect(max.dataset[1]).not.toBe(4);
+  });
 });
