@@ -2,7 +2,7 @@ const Heap = require("./heap");
 
 class MaxHeap extends Heap {
   constructor() {
-    super();
+    super("max");
   }
 
   isItNeat(element1, element2) {

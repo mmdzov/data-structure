@@ -2,7 +2,7 @@ const Heap = require("./heap");
 
 class MinHeap extends Heap {
   constructor() {
-    super();
+    super("min");
   }
 
   isItNeat(element1, element2) {

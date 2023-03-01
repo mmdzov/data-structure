@@ -1,7 +1,9 @@
 class Heap {
-  constructor() {
+  constructor(typeofHeap = null) {
     if (new.target === Heap)
       throw new Error("Sorry! You cannot create an instance of this class");
+
+    this.typeofHeap = typeofHeap;
 
     this.dataset = [];
   }
@@ -82,19 +84,43 @@ class Heap {
     return founds;
   }
 
+  poll() {
+    if (this.dataset.length === 0) return null;
+
+    if (this.dataset.length === 1) return this.dataset.pop();
+
+    const item = this.dataset[0];
+
+    this.dataset[0] = this.dataset.pop();
+
+    this.heapifyDown();
+
+    return item;
+  }
+
+  pop() {
+    const dataset = this.dataset.sort((a, b) => b - a);
+
+    const item = dataset[0];
+
+    if (!item) return null;
+
+    this.remove(item);
+
+    return item;
+  }
+
   heapifyDown(startIndex = 0) {
     let current = startIndex;
     let next = null;
 
     while (this.hasLeftChild(current)) {
-      const parent = this.getParent(current);
-
       if (
-        this.hasRightChild(parent) &&
-        this.isItNeat(this.getRightIndex(parent), this.getLeftIndex(parent))
+        this.hasRightChild(current) &&
+        this.isItNeat(this.getRightIndex(current), this.getLeftIndex(current))
       ) {
-        next = this.getRightIndex(parent);
-      } else next = this.getLeftIndex(parent);
+        next = this.getRightIndex(current);
+      } else next = this.getLeftIndex(current);
 
       if (this.isItNeat(this.dataset[current], this.dataset[next])) break;
 
