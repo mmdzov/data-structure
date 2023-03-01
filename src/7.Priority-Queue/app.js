@@ -1,22 +1,21 @@
 const MinHeap = require("../6.Heap/MinHeap");
 
-class PriorityQueue {
+class PriorityQueue extends MinHeap {
   constructor() {
-    this.minHeap = new MinHeap();
-
+    super();
     this.priorities = new Map();
   }
 
   enqueue(value, priority) {
     this.priorities.set(priority, value);
 
-    this.minHeap.insert(priority);
+    super.insert(priority);
 
     return this;
   }
 
   dequeue() {
-    const priority = this.minHeap.pop();
+    const priority = super.pop();
 
     this.priorities.delete(priority);
 
@@ -40,24 +39,20 @@ class PriorityQueue {
     return { priority, value: this.priorities.get(priority) };
   }
 
-  isEmpty() {
-    return this.minHeap.isEmpty();
-  }
-
   front() {
-    return this.getByPriority(this.minHeap.peek());
+    return this.getByPriority(super.peek());
   }
 
   rear() {
     if (this.isEmpty()) return null;
 
-    const dataset = this.minHeap.dataset;
+    const dataset = super.dataset;
 
     return this.getByPriority(dataset[dataset.length - 1]);
   }
 
   print() {
-    const dataset = this.minHeap.dataset.map((priority) =>
+    const dataset = super.dataset.map((priority) =>
       this.getByPriority(priority),
     );
 
@@ -65,11 +60,11 @@ class PriorityQueue {
   }
 
   printPriorities() {
-    return this.minHeap.dataset;
+    return super.dataset;
   }
 
   size() {
-    return this.minHeap.dataset.length;
+    return super.dataset.length;
   }
 }
 
